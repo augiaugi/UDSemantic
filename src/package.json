@@ -1,0 +1,34 @@
+{
+  "name": "UDSemantic",
+  "version": "0.1.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p --env production",
+    "dev": "webpack -p --env development"
+  },
+  "author": "Augustin",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.6",
+    "css-loader": "^3.2.0",
+    "file-loader": "4.2.0",
+    "style-loader": "1.0.0",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "webpack": "4.39.3",
+    "webpack-cli": "3.3.7"
+  }
+}
