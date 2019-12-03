@@ -6,11 +6,27 @@ try
     Import-Module "$((Get-Item $PSScriptRoot).Parent.FullName)\output\UniversalDashboard.Semantic\UniversalDashboard.Semantic.psm1" -Force
 
     $Dashboard = New-UDDashboard -Title "Breadcrump" -Content {
-        New-UDSemanticBreadcrump -Sections @(
-            New-UDSemanticBreadcrumpSection -Text 'Home'
-            New-UDSemanticBreadcrumpSection -Text 'Page1'
-            New-UDSemanticBreadcrumpSection -Text 'Page2'
-        )
+        New-UDSemanticBreadcrump 
+
+        New-UDCard -Title 'Size' -Content {
+            New-UDParagraph -Text 'mini, tiny, small, large, big, huge, massive'
+
+            New-UDSemanticBreadcrump -Size mini
+            New-UDSemanticBreadcrump -Size tiny
+            New-UDSemanticBreadcrump -Size small
+            New-UDSemanticBreadcrump -Size large
+            New-UDSemanticBreadcrump -Size big
+            New-UDSemanticBreadcrump -Size huge
+            New-UDSemanticBreadcrump -Size massive
+        }
+        
+        New-UDCard -Title 'Size' -Content {
+            New-UDSemanticBreadcrump -Sections @(
+                New-UDSemanticBreadcrumpSection -Text 'Home'
+                New-UDSemanticBreadcrumpSection -Text 'Page1'
+                New-UDSemanticBreadcrumpSection -Text 'Page2'
+            )
+        }
     }
     
     $Server = Start-UDDashboard -Port 10000 -Dashboard $Dashboard

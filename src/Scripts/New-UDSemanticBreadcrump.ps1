@@ -26,8 +26,8 @@ function New-UDSemanticBreadcrump {
         [Parameter()]
         $Devider = (New-UDSemanticBreadcrumpDevider -Text '/'),
 
-        #mini tiny small large big huge massive
         [Parameter()]
+        [ValidateSet('mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive')]
         [string]$Size
     )
 
@@ -44,6 +44,11 @@ function New-UDSemanticBreadcrump {
 
             sections = $Sections
             divider = $Devider
+        }
+
+        if($Size)
+        {
+            $Object.size = $Size
         }
 
         $Object.PSTypeNames.Insert(0, 'UDSemantic.Breadcrump')

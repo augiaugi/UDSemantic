@@ -8,12 +8,12 @@ export default class UDSemanticBreadcrumb extends React.Component {
       //<h1>{this.props.id}</h1>
 
       <div>
-        <Breadcrumb>
+        <Breadcrumb size={this.props.size}>
           <Breadcrumb.Section link>Home</Breadcrumb.Section>
-          <Breadcrumb.Divider />
+          <Breadcrumb.Divider><font color="black">#</font></Breadcrumb.Divider>
           <Breadcrumb.Section link>Store</Breadcrumb.Section>
-          <Breadcrumb.Divider />
-          <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
+          <Breadcrumb.Divider><font color="black">#</font></Breadcrumb.Divider>
+          <Breadcrumb.Section active><font color="black">T-Shirt</font></Breadcrumb.Section>
         </Breadcrumb>
       </div>
     );
